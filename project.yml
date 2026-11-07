@@ -1,0 +1,28 @@
+name: LensTrue
+options:
+  deploymentTarget:
+    iOS: "16.0"
+targets:
+  LensTrue:
+    type: application
+    platform: iOS
+    sources:
+      - LensTrue
+    info:
+      path: LensTrue/Info.plist
+      properties:
+        CFBundleDisplayName: LensTrue
+        UILaunchScreen: {}
+        UIRequiredDeviceCapabilities:
+          - arkit
+        UISupportedInterfaceOrientations:
+          - UIInterfaceOrientationPortrait
+        NSCameraUsageDescription: 撮影と深度計測に使います
+        NSPhotoLibraryAddUsageDescription: 補正した写真を保存します
+    settings:
+      base:
+        SWIFT_VERSION: "5.0"
+        PRODUCT_BUNDLE_IDENTIFIER: com.lenstrue.app
+        MARKETING_VERSION: "1.0"
+        CURRENT_PROJECT_VERSION: "1"
+        TARGETED_DEVICE_FAMILY: "1"
